@@ -6,3 +6,4 @@
 <img width="1919" height="1078" alt="Screenshot 2025-07-30 233104" src="https://github.com/user-attachments/assets/f537387c-a9ca-4dd1-9d03-006ba0dac90a" />
 <img width="1919" height="1079" alt="Screenshot 2025-07-30 233117" src="https://github.com/user-attachments/assets/fc5da888-3452-4947-99c3-648bf4e9899d" />
 <img width="1919" height="1079" alt="Screenshot 2025-07-30 233128" src="https://github.com/user-attachments/assets/b796bbad-b29b-4ddb-9ffa-0b36c8399f2b" />
+[5195594_surya pasupuleti.pdf](https://github.com/user-attachments/files/21617876/5195594_surya.pasupuleti.pdf)
