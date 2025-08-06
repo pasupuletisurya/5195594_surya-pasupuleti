@@ -1,0 +1,50 @@
+ question 1;
+
+ def plusMinus(arr):
+     positiveCounter = 0
+     negetiveCounter = 0
+     zeroCounter = 0
+     for i in range (len(arr)):
+         if arr[i] > 0:
+              positiveCounter += 1
+         elif arr[i] < 0 :
+              negetiveCounter +=1
+         else:
+              zeroCounter += 1
+      print("%f"%(positiveCounter / len(arr)))
+      print("%f"%(negetiveCounter / len(arr)))
+      print("%f"%(zeroCounter / len(arr)))
+question 2;
+   def miniMaxSum(arr):
+       arr = sorted(arr)
+       print(sum(arr[:-1]),sum(arr[1:]))
+
+question 3;
+ 
+
+
+
+
+
+question 4;
+def matchingStrings(strings, queries):
+     results = []
+ 
+     for query in queries:
+        results.append(strings.count(query))
+ 
+     return results
+question 5;
+  def lonelyinteger(a):
+      for i in a:
+          if a.count(i)==1:
+            return i
+question 6;
+ def diagonalDifference(arr):
+     x = 0
+     y = 0
+ 
+     for i in range(len(arr)):
+        x += arr[i][i]
+        y += arr[i][len(arr)-1-i]
+     return(abs(x-y))
