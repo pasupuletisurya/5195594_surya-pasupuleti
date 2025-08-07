@@ -48,3 +48,31 @@ question 6;
         x += arr[i][i]
         y += arr[i][len(arr)-1-i]
      return(abs(x-y))
+question 7;
+  def countingSort(arr):
+    freq = [0]*100
+    for i in range(len(arr)):
+        freq[arr[i]] += 1
+    return freq
+question 8;
+ def pangrams(s):
+    alphabet={}
+    for i in s.lower():
+        if i.isalpha() and i in alphabet:
+            alphabet[i]+=1
+        elif i.isalpha() and i not in alphabet:
+            alphabet[i]=0
+    
+    if len(alphabet)==26:
+        return  "pangram"
+    else:
+        return "not pangram"
+question 9;
+ def twoArrays(k, A, B):
+    A.sort()
+    B.sort(reverse=True)    
+    for a,b in zip(A,B):
+        if a+b <k:
+            return "NO"
+    
+     return "YES"
