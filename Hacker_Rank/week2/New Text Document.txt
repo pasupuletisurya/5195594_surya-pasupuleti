@@ -1,0 +1,128 @@
+question 1;
+import math
+import os
+import random
+import re
+import sys
+def sock_merchant(socks):
+    color_count = {}
+    pairs = 0
+
+    # Count occurrences of each sock color
+    for color in socks:
+        color_count[color] = color_count.get(color, 0) + 1
+
+    # Calculate pairs for each color
+    for count in color_count.values():
+        pairs += count // 
+
+    return pairs
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = sockMerchant(n, ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+ 
+question 2;
+
+ef findZigZagSequence(a, n):
+    a.sort()
+    mid = int((n + 1)/2)
+    a[mid], a[n-1] = a[n-1], a[mid]
+
+    st = mid + 1
+    ed = n - 1
+    while(st <= ed):
+        a[st], a[ed] = a[ed], a[st]
+        st = st + 1
+        ed = ed + 1
+
+    for i in range (n):
+        if i == n-1:
+            print(a[i])
+        else:
+            print(a[i], end = ' ')
+    return
+
+test_cases = int(input())
+for cs in range (test_cases):
+    n = int(input())
+    a = list(map(int, input().split()))
+    findZigZagSequence(a, n)
+
+
+question 3;
+
+import math
+import os
+import random
+import re
+import sys
+
+def pageCount(n, p):
+    """
+    n: total number of pages in the book
+    p: target page to reach
+    Returns the minimum number of page turns
+    """
+    # Turns from the front
+    front_turns = p // 2
+    # Turns from the back
+    back_turns = (n // 2) - (p // 2)
+    return min(front_turns, back_turns)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    p = int(input().strip())
+
+    result = pageCount(n, p)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+question;
+
+import math
+import os
+import random
+import re
+import sys
+def towerBreakers(n, m):
+    if m == 1:
+        return 2
+   moves
+    elif n % 2 == 0:
+        return 2
+    else:
+        return 1
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        first_multiple_input = input().rstrip().split()
+
+        n = int(first_multiple_input[0])
+
+        m = int(first_multiple_input[1])
+
+        result = towerBreakers(n, m)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
+
