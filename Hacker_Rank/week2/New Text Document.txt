@@ -125,4 +125,125 @@ if __name__ == '__main__':
         fptr.write(str(result) + '\n')
 
     fptr.close()
+ 
+question ;
 
+def caesarCipher(s, k):
+    res = []
+    for c in s:
+        if c.isupper():
+            res.append(symbols_up[(symbols_up.index(c)+k)%len(symbols_up)])
+        elif c.islower():
+            res.append(symbols_low[(symbols_low.index(c)+k)%len(symbols_low)])
+        else:
+            res.append(c)
+                       
+    return "".join(map(str, res))
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    s = input()
+
+    k = int(input().strip())
+
+    result = caesarCipher(s, k)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
+question ;
+def maxMin(k, arr):
+    k-=1
+    arr.sort()
+    return min(arr[i+k]-arr[i] for i in range(len(arr)-k))
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    k = int(input().strip())
+
+    arr = []
+
+    for _ in range(n):
+        arr_item = int(input().strip())
+        arr.append(arr_item)
+
+    result = maxMin(k, arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+question ;
+
+def dynamicArray(n, queries):
+    arr = [[] for _ in range(n)]
+    lastAnswer = 0
+    result = []
+
+    for query in queries:
+        t, x, y = query
+        idx = (x ^ lastAnswer) % n
+
+        if t == 1:
+            arr[idx].append(y)
+        elif t == 2:
+            lastAnswer = arr[idx][y % len(arr[idx])]
+            result.append(lastAnswer)
+
+   return
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    first_multiple_input = input().rstrip().split()
+
+    n = int(first_multiple_input[0])
+
+    q = int(first_multiple_input[1])
+
+    queries = []
+
+    for _ in range(q):
+        queries.append(list(map(int, input().rstrip().split())))
+
+    result = dynamicArray(n, queries)
+
+    fptr.write('\n'.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
+
+question ;
+
+def gridChallenge(grid):
+    for j in range(n-1):
+        for k in range(n):
+            if arr[j][k] > arr[j+1][k]:
+                return False
+    return True
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        grid = []
+
+        for _ in range(n):
+            grid_item = input()
+            grid.append(grid_item)
+
+        result = gridChallenge(grid)
+
+        fptr.write(result + '\n')
+
+    fptr.close()
